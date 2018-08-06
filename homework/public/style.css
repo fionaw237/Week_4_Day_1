@@ -1,0 +1,9 @@
+body {
+  background-color: lightgrey;
+  font-family: helvetica;
+  color: darkslategrey;
+}
+
+h1.main_title {
+  text-decoration: underline;
+}
