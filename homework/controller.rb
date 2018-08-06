@@ -9,7 +9,8 @@ also_reload("./models/*")
 get '/:hand1/:hand2' do
 
   game = Game.new(params[:hand1], params[:hand2])
-  game.play()
+  @outcome = game.play()
+  erb(:result)
   # if hand1 == hand2
   #   return "It's a draw!"
   # elsif hand1 = "rock" && hand2 == "scissors"
