@@ -7,7 +7,7 @@ class Game
 
   def play()
 
-    hands = [@hand_1, @hand_2]
+    @hands = [@hand_1, @hand_2]
 
     # for MVP
     # if @hand_1 == @hand_2
@@ -32,14 +32,11 @@ class Game
   end
 
   def player_1_wins?()
-    if (@hand_1 == "rock" && @hand_2 == "scissors") || (@hand_1 == "paper" && @hand_2 == "rock") || (@hand_1 == "scissors" && @hand_2 == "paper")
+    if (@hands == ["rock", "scissors"]) || (@hands == ["paper", "rock"]) || (@hands == ["scissors", "paper"])
       return true
     else
       return false
     end
   end
-
-
-
 
 end
