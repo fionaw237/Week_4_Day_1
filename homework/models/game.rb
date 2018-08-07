@@ -10,6 +10,9 @@ class Game
     @hands = [@hand_1, @hand_2]
 
     # for MVP
+# additionally, could use index of array below for extension - to find
+# winning player
+
     # if @hand_1 == @hand_2
     #   return "It's a draw!"
     # elsif hands.include?("rock") && hands.include?("paper")
@@ -40,3 +43,18 @@ class Game
   end
 
 end
+
+# suggested solution
+# winners = {
+#   "rock" => "scissors",
+#   "scissors" => "paper",
+#   "paper" => "rock"
+# }
+#
+# if hand_1 == hand_2
+#   return "Draw!"
+# elsif winners[hand_1] == hand_2
+#   "player 1 wins"
+# elsif winners[hand_2] == hand_1
+#   "player 2 wins"
+# end
