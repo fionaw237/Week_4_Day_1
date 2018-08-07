@@ -13,6 +13,16 @@ get '/:hand1/:hand2' do
   #could also do return Game.play(hand_1, hand_2) but make a self.play method?
 end
 
+get '/:hand1' do
+  rps_array = ["rock", "paper", "scissors"]
+  hand_1 = params[:hand1]
+  hand_2 = rps_array.sample()
+  game = Game.new(hand_1, hand_2)
+  @outcome = game.play()
+  erb(:result)
+  #could also do return Game.play(hand_1, hand_2) but make a self.play method?
+end
+
 get '/' do
   erb(:welcome)
 end
